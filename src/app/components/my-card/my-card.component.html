@@ -1,0 +1,12 @@
+<div *ngIf="item"> 
+    <div class="box shadow-1" style="border-radius: 4px;">
+        <div class="grid" style="margin: 5px">
+            <div class="col-2">
+                <img src="../../../assets/tombstone.svg">
+            </div>
+            <div class="col-10" style="display: flex; align-items: center;">
+               {{item.name.title}} {{item.name.first}} {{item.name.last}} at age {{item.dob.age}}
+            </div>
+        </div>        
+    </div>
+</div>
