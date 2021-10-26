@@ -12,9 +12,12 @@ import { UserName } from 'src/app/models/username';
 export class MyCardComponent {
 
 	@Input() item?: Item
+	todayDate = new Date()
 	
 	constructor() { }
 
-	ngOnInit(): void {  }
+	ngOnInit(): void {  
+
+	}
 
 }
