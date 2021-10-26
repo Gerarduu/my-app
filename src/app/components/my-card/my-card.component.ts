@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DoB } from 'src/app/models/DoB';
-import { Item } from 'src/app/models/item';
-import { UserName } from 'src/app/models/username';
+import { GoogleItem } from 'src/app/models/googleItem';
 
 @Component({
 	selector: 'my-card',
@@ -11,13 +9,20 @@ import { UserName } from 'src/app/models/username';
 
 export class MyCardComponent {
 
-	@Input() item?: Item
-	todayDate = new Date()
-	
+	@Input() item!: GoogleItem
+	todayDate: Date = new Date()
+	yearOpen: string = ""
+	yearClose: string = ""
+
 	constructor() { }
 
 	ngOnInit(): void {  
+		this.yearOpen = this.item.dateOpen.split("-").shift() as string
+		this.yearClose = this.item.dateClose.split("-").shift() as string
+	}
 
+	openLink() {
+		window.open(this.item.link, "_blank");
 	}
 
 }

@@ -1,4 +1,4 @@
-// MARK: - Core Components
+// MARK: - Core Modules
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,7 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-// MARK: - PrimeNG Components
+// MARK: - Ng2Search Modules
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+// MARK: - PrimeNG Modules
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from "primeng/button";
@@ -30,7 +34,8 @@ import { MyGridComponent } from './components/my-grid/my-grid.component';
     FormsModule,
     InputTextModule,
     ButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

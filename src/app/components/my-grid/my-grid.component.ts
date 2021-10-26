@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemsService } from 'src/app/services/items-service/items.service';
 import { Data } from 'src/app/models/data';
 import { Item } from 'src/app/models/item';
+import { GoogleItem } from 'src/app/models/googleItem';
 
 @Component({
   selector: 'app-my-grid',
@@ -10,7 +11,8 @@ import { Item } from 'src/app/models/item';
 })
 export class MyGridComponent implements OnInit {
 
-  items: Item[] = []
+  items: GoogleItem[] = []
+  searchText = ""
 
   constructor(private itemsService: ItemsService) { }
 
@@ -19,11 +21,9 @@ export class MyGridComponent implements OnInit {
   }
 
   getItems() {
-    this.itemsService.getDataFromAPI()
-    .subscribe(
-      data => { 
-      this.items = data.results
-    })
+    this.itemsService.getItemsList()
+    .then(
+      data => { this.items = data.data })
   }
 
 }

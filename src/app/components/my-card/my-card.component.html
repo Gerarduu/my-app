@@ -1,17 +1,24 @@
 <div *ngIf="item"> 
-    <div class="box shadow-1" style="border-radius: 4px;">
+    <div class="box shadow-1" style="border-radius: 4px;" (click)="openLink()">
         <div class="grid">
-            <div class="col-2" style="display: flex; align-items: center;">
-                <img src="../../../assets/tombstone.svg">
+            <div class="col-3">
+                <div class="grid"> 
+                    <div class="col-12"> 
+                        <img src="../../../assets/tombstone.svg">
+                    </div>
+                    <div class="col-12" style="font-size: 12px; display: flex; justify-content: center;"> 
+                        {{yearOpen}} - {{yearClose}}   
+                    </div>
+                </div>
             </div>
-            <div class="col-10">
+            <div class="col-9" style="height: 250px">
                <div class="grid">
-                   <div class="col-12" style="display: flex; align-items: center;">
-                    {{ item.name.title }} {{ item.name.first }} {{ item.name.last }} at age {{ item.dob.age }}
+                   <div class="col-12">
+                    <h2> {{ item.name }} ({{ item.type }}) </h2>
                    </div>
-                   <div class="col-12" style="display: flex; align-items: center;">
-                    {{ item.dob.date | date:'longDate' }} to {{ todayDate | date:'longDate' }}
-                   </div>
+                   <div class="col-12">
+                    {{ item.description }}
+                    </div>
                </div>
             </div>
         </div>        
