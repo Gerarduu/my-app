@@ -2,7 +2,7 @@
   <div class="col-12" style="display: flex; justify-content: center;"> 
     <input type="text" class="myTextInput" placeholder="Search..." [(ngModel)]="searchText" />
   </div>
-  <div class="col-4" *ngFor="let item of items | filter:searchText">
+  <div class="col-3" *ngFor="let item of items | filter:searchText">
     <my-card [item]="item" style="cursor: pointer;"></my-card>
   </div>
 </div>

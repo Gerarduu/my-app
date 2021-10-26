@@ -1,9 +1,10 @@
 .myTextInput {
     height: 30px;
     width: 400px;
-    border-radius: 5px;
-    border: 1px solid #B3B3B3;
     padding-left: 10px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #B3B3B3;
 }
 
 .myTextInput:focus {
