@@ -16,7 +16,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from "primeng/button";
 
-
 // MARK: - Custom Components
 
 import { MyCardComponent } from './components/my-card/my-card.component';
